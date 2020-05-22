@@ -1,4 +1,4 @@
-The shell script "filter" translates location information inside a json file into formatted csv results. The formatted results are inside "formatted_location.csv".
+The shell script "filter" turns twitter users' self-reported locations into formatted locations. The formatted results are inside "formatted_location.csv".
 
 If you delete "location", "location.csv", "twitter_id", "twitter_id.csv", and "formatted_location.csv", by running
 
