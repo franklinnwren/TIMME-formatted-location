@@ -1,0 +1,10 @@
+#!/bin/sh
+
+grep '"location"' simplified_user_info.json > location
+grep ': {' simplified_user_info.json > twitter_id
+python3 pythonhelper.py
+join -t , -1 2 -2 4 twitter_id.csv location.csv > formatted_location.csv
+sed -i 's/" "/"/g' f*.csv
+cat formatted_location.csv | tr -d '"\r' > fl.csv
+cat fl.csv | tr ',' '\t' > formatted_location.csv
+rm fl.csv
