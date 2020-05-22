@@ -110,7 +110,7 @@ for iter in locations:
                 found_country_flag = "found"   #if any state name (long) appears in the text, mark "country" and "state" as "found"
                 found_state_flag = "found"
                 for j in state_to_city_long[i]:
-                    if j in iter and (j not in i or j == i):   #这个我想了好久！！！
+                    if j in iter and (j not in i or j == i):
                         if found_city_flag == "found":
                             if new_locations[-1][0] in j:   #if two city names appears in the same line, check whether our current city name is contained in the new city name
                                 new_locations = new_locations[:-1]   #if that is the case, remove any city name that has been added before, since we will add the new the city name later
